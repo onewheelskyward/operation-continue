@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- Congratulations.  You're about to be exposed to my sense of humor. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Andrew Kreps.  Bringing you code of estimable quality since 1993.</title>
+        <style type="text/css">  /* Simplicity is my friend. */
+        body {
+            font-family: Monospace, Courier New, serif;
+            font-size: large;
+            background-color: #ffffcc;  /* You might call it a holdover from the 8-bit color days.  I call it easier to type. */
+            color: #000000;
+        }
+        pre {
+            font-family: Monospace, Courier New, serif;
+            font-size: large;
+        }
+        a:link {
+            color: #000000;
+        }
+        a:visited {
+            color: #666666;
+        }
+        .indentWide {
+            margin-left: 80px;
+        }
+        .indentNominal {
+            margin-left: 40px;
+        }
+        .languageItem {
+            color: #666666;
+        }
+        .variable {
+            color: #6666FF;
+        }
+        .subscript {
+            font-size: x-small;
+            vertical-align: super;
+        }
+        .regex {
+            color: #44aa44;
+        }
+        </style>
+    </head>
+    <body>
+
+<!-- lang:C -->
+<span class="languageItem">#ifndef</span> I_AM_A_CODER<br/>  <!-- // How many of you remember C?  ANSI much? -->
+<span class="languageItem">#define</span> I_AM_A_CODER<br/>
+<span class="languageItem">#endif</span><br/>
+<br/>
+
+<!-- lang:Java -->
+<span class="languageItem">import java.util.HashMap;</span><br/>
+<br/>
+
+<!-- lang:Perl -->
+<span class="variable">$pertinent </span><span class="languageItem">= &lt;&lt;INFO;</span><br/>  <!-- # Heredoc is one of my favorite things. It really cleans up the readability of the code.  I've always wished I could Heredoc comments in Perl. -->
+
+<!-- lang:HTML :) -->
+<div class="indentNominal">
+    Andrew Kreps<br/>
+    (503) 544-3412<br/>
+    andrew.kreps@gmail.com<br/> <!-- # Has anyone else noticed how useless mailto: links are these days? -->
+    Portland, OR<br/>
+</div>
+
+<span class="languageItem">INFO</span><br/>  <!-- # end Heredoc -->
+<br/>
+
+<!-- lang:Ruby -->
+<span class="variable">professional_experience </span><span class="languageItem">= </span>"about15years"[<span class="regex">/\d{2}/</span>]<br/>  
+<!-- # I'm a little torn on exceptionally long variable names, but functions that are named exactly what they do are essential. -->
+<br/>                                                           <!-- # p.s. I heart regex :) -->
+
+<span class="variable">key_qualities</span> = [<br/>
+<div class="indentWide">
+        "Avid, quick learner.",<br/>
+        "I think different.  So different I don't even use the word differently.",<br/>
+        "Problem solver.",<br/>
+        "\"I'm asking you this question because you're the best combination of knowledgable and non-threatening.\" - My co-worker, Ellie",<br/>
+        "Patient, mentoring personality."<br/>
+</div>
+<span class="indentNominal">        ]</span><br/>
+<br/>
+
+<span class="variable">key_qualities</span><span class="languageItem">.each_with_index do |</span><span class="variable">quality</span><span class="languageItem">|</span><br/>
+<span class="indentNominal languageItem">  puts "#{index}. #{quality}"</span>  # Yeah, my list is 0 indexed.  Have you read line 1 (or 2, if you prefer) of my resume? <br/>
+end<br/>
+<br/>
+
+<!-- lang:Java -->
+<!-- /* This next line exemplifies what I don't like about Java.  Too much repeatable repeating repetition. */ -->
+
+<span class="languageItem">HashMap </span><span class="variable">hashmap</span><span class="languageItem"> = new HashMap();</span><br/>
+<span class="variable">hashmap</span><span class="languageItem">.put(</span>"Symphony Group"<span class="languageItem">,</span> "Reston, VA"<span class="languageItem">);</span><br/>
+<span class="variable">hashmap</span><span class="languageItem">.put(</span>"DVD Express"<span class="languageItem">,</span> "Los Angeles, CA"<span class="languageItem">);</span><br/>  <!-- PHP's array ( key => value, ... ) syntax is far superior here. -->
+<span class="variable">hashmap</span><span class="languageItem">.put(</span>"Nike"<span class="languageItem">,</span> "Beaverton, OR"<span class="languageItem">);</span><br/>
+<span class="variable">hashmap</span><span class="languageItem">.put(</span>"Monsoon"<span class="languageItem">,</span> "Portland, OR"<span class="languageItem">);</span><br/> 
+<span class="variable">hashmap</span><span class="languageItem">.put(</span>"Symantec"<span class="languageItem">,</span> "Springfield, OR"<span class="languageItem">);</span><br/>
+<span class="variable">hashmap</span><span class="languageItem">.put(</span>"Regence Blue Cross Blue Shield"<span class="languageItem">,</span> "Portland, OR"<span class="languageItem">);</span><br/>
+
+<span class="variable">hashmap</span>
+<span class="languageItem">.put(</span>
+"ShopIgniter"
+<span class="languageItem">,</span>
+"Portland, OR"
+<span class="languageItem">);</span>
+<br/>
+
+<span class="variable">hashmap</span>
+<span class="languageItem">.put(</span>
+"Athletepath"
+<span class="languageItem">,</span>
+"Portland, OR"
+<span class="languageItem">);</span>
+<br/>
+
+<!-- /* As much as I'd love to triple-dereference the iterator from the Java HashMap, it's going to make my resume much, much too long.  So here we go with some... */ --> 
+
+<pre>  <!-- lang:PHP -->   <!-- // Multi-line spans?  Yep.  You betchya.  Makes my life easier and I'm the only code maintainer.  :) -->
+<span class="languageItem">&lt;?php
+foreach (</span><span class="variable">$hashmap</span><span class="languageItem"> as </span><span class="variable">$company</span><span class="languageItem"> => </span><span class="variable">$location</span><span class="languageItem">) {</span>
+
+    <span class="variable">$title</span><span class="languageItem"> = </span><span class="variable">$company . </span>", located in "<span class="languageItem"> . </span><span class="variable">$location</span><span class="lanuageItem"> . </span>"."<span class="languageItem">;
+
+    switch (</span><span class="variable">$company</span><span class="languageItem">) {
+
+        case </span>"Symphony Group"<span class="languageItem">:</span>
+            <span class="variable">$timespan</span><span class="languageItem"> = </span>"2 years"<span class="languageItem">;</span>
+            <span class="variable">$addl</span><span class="languageItem"> = </span>". Small shop.  3 guys.  I taught myself how to write Perl code, literally, overnight."<span class="languageItem">;</span>
+            <span class="variable">$url</span><span class="languageItem"> = </span>"<a target="andrewsresume" href="http://web.archive.org/web/19970413023111/http://www.symgrp.com/">http://web.archive.org/web/19970413023111/http://www.symgrp.com/</a>"<span class="languageItem">;</span>
+            <span class="variable">$alive_today</span><span class="languageItem"> = </span>false<span class="languageItem">;</span>
+            <span class="languageItem">break;</span>  <!-- For some reason, the iPhone doesn't tolerate the lack of a span on this line.  It spaces it funny.  Hance, the extra span. -->
+
+        <span class="languageItem">case </span>"DVD Express"<span class="languageItem">:</span>
+            <span class="variable">$timespan</span><span class="languageItem"> = </span>"3 years"<span class="languageItem">;</span>
+            <span class="variable">$addl</span><span class="languageItem"> = </span>", doing everything from being the lead website developer to creating new automated business processes."<span class="languageItem">;</span>
+            <span class="variable">$url</span><span class="languageItem"> = </span>"<a target="andrewsresume" href="http://web.archive.org/web/*/dvdexpress.com">http://web.archive.org/web/*/dvdexpress.com</a>"<span class="languageItem">;</span>
+            <span class="variable">$alive_today</span><span class="languageItem"> = </span>false<span class="languageItem">;</span>
+            <span class="languageItem">break;</span>
+
+        <span class="languageItem">case </span>"Nike"<span class="languageItem">:</span>
+            <span class="variable">$timespan</span><span class="languageItem"> = </span>"2 years"<span class="languageItem">;</span>
+            <span class="variable">$addl</span><span class="languageItem"> = </span>" learning how to navigate the corporate structure."<span class="languageItem">;</span>
+            <span class="variable">$url</span><span class="languageItem"> = </span>"<a target="andrewsresume" href="http://store.nike.com/us/en_us/#n">http://store.nike.com/us/en_us/#n</a>"<span class="languageItem">;</span>
+            <span class="variable">$alive_today</span><span class="languageItem"> = </span>true<span class="languageItem">;</span>
+            <span class="languageItem">break;</span>
+
+        <span class="languageItem">case </span>"Monsoon"<span class="languageItem">:</span>
+            <span class="variable">$timespan</span><span class="languageItem"> = </span>"2 years"<span class="languageItem">;</span>
+            <span class="variable">$addl</span><span class="languageItem"> = </span>" as the only website dev on staff.  I was given autonomy and free reign, and I got the job done."<span class="languageItem">;</span>
+            <span class="variable">$url</span><span class="languageItem"> = </span>"<a target="andrewsresume" href="http://www.monsoonworks.com">http://www.monsoonworks.com</a>"<span class="languageItem">;</span>
+            <span class="variable">$alive_today</span><span class="languageItem"> = </span>true<span class="languageItem">;</span>
+            <span class="languageItem">break;</span>
+
+        <span class="languageItem">case </span>"Symantec"<span class="languageItem">:</span>
+            <span class="variable">$timespan</span><span class="languageItem"> = </span>"2 years"<span class="languageItem">;</span>
+            <span class="variable">$addl</span><span class="languageItem"> = </span>" piecing together large chunks of Java code.  It was here I developed an appreciation for reusable code."<span class="languageItem">;</span>
+            <span class="variable">$url</span><span class="languageItem"> = </span>"<a target="andrewsresume" href="http://buy.norton.com/estore/mf/upgradeRenewal">http://buy.norton.com/estore/mf/upgradeRenewal</a>"<span class="languageItem">;</span>
+            <span class="variable">$alive_today</span><span class="languageItem"> = </span>true<span class="languageItem">;</span>
+            <span class="languageItem">break;</span>
+
+        <span class="languageItem">case </span>"Regence Blue Cross Blue Shield <span class="subscript">(tm) (r) (etc)</span>"<span class="languageItem">:</span>
+            <span class="variable">$timespan</span><span class="languageItem"> = </span>"3+ years"<span class="languageItem">;</span>
+            <span class="variable">$addl</span><span class="languageItem"> = </span>" as a decision maker, senior developer, project leader."<span class="languageItem">;</span>
+            <span class="variable">$url</span><span class="languageItem"> = </span>"<a target="andrewsresume" href="https://www.myregence.com">https://www.myregence.com</a>"<span class="languageItem">;</span>
+            <span class="variable">$alive_today</span><span class="languageItem"> = </span>true<span class="languageItem">;</span>
+            <span class="languageItem">break;</span>
+
+    } // end switch ($company)
+
+    print <span class="variable">$title</span><span class="languageItem"> . </span>"\n"<span class="languageItem">;
+    print </span>"At this company, I spent " <span class="languageItem">. </span><span class="variable">$timespan</span><span class="languageItem"> . </span><span class="variable">$addl</span><span class="languageItem"> . </span>"\n"<span class="languageItem">;
+    print </span><span class="variable">$url</span><span class="languageItem"> . </span>"\n"<span class="languageItem">;
+    print (true === </span><span class="variable">$alive_today</span><span class="languageItem">) ? </span>"\n"<span class="languageItem"> : </span>"&lt;sniff&gt;\n"<span class="languageItem">;
+
+} // end foreach ($hashmap)
+?&gt;</span></pre>
+<br/>
+If some lunatic ever wrote a JaRuPerHP C compiler, I'd like to think this code would at least inter-pile.<br/>
+<br/>
+
+    </body>
+</html>

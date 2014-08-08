@@ -1,0 +1,71 @@
+body {
+    font-family: Monospace, Courier New, serif;
+    font-size: large;
+    background-color: #ffffcc;  /* You might call it a holdover from the 8-bit color days.  I call it easier to type. */
+    color: #666666;
+}
+pre {
+    font-family: Monospace, Courier New, serif;
+    font-size: large;
+}
+a:link {
+    color: #FF5555;
+}
+a:visited {
+    color: #FF6666;
+}
+a:hover {
+    color: #FF3333;
+}
+.indentWide {
+    margin-left: 80px;
+}
+.indentMedium {
+    margin-left: 100px;
+}
+.indentWAT {
+    margin-left: 120px;
+}
+.indentNominal {
+    margin-left: 40px;
+}
+.indentNominalPlus {
+    margin-left: 60px;
+}
+.noTop {
+    margin-top: 0px;
+}
+.noBottom {
+    margin-top: 0px;
+}
+.languageItem {
+    color: #666666;
+}
+.variable {
+    color: #6666FF;
+}
+.function {
+    color: #9933FF;
+}
+.comment {
+    color: #999999;
+}
+.boolean {
+    color: #22AA22;
+}
+.label {
+    color: #AAAAFF;
+}
+.string {
+    color: #44AA88;
+}
+.subscript {
+    font-size: x-small;
+    vertical-align: super;
+}
+.regex {
+    color: #44CC44;
+}
+.noHeight {
+    line-height: 0.1em;
+}

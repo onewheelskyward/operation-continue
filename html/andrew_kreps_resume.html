@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- Congratulations.  You're about to be exposed to my sense of humor. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Andrew Kreps.  Bringing you code of estimable quality since 1993.</title>
+        <link rel="stylesheet" type="text/css" href="x.css" />
+    </head>
+    <body>
+<div class="comment">#v2014.07.24</div>
+<div class="comment">#require_relative 'perfect_resume_header'</div>
+
+<p>
+class <span class="variable">Job</span></p>
+<p class="indentNominal">
+    attr_accessor
+    <span class="label">:company</span>,
+    <span class="label">:timespan_years</span>,
+    <span class="label">:deets</span>,
+    <span class="label">:favorite_project</span>,
+    <span class="label">:url</span>,
+    <span class="label">:alive_today</span>
+</p>
+<p class="indentNominal">
+    def <span class="function">initialize</span>(<span class="variable">company</span>,
+    <span class="variable">timespan_years</span>,
+    <span class="variable">deets</span>,
+    <span class="variable">favorite_project</span>,
+    <span class="variable">url</span>,
+    <span class="variable">alive_today</span>)<br/>
+    <span class="indentWide variable">self</span>.<span class="variable">company</span> = <span class="variable">company</span><br/>
+    <span class="indentWide variable">self</span>.<span class="variable">timespan_years</span> = <span class="variable">timespan_years</span><br/>
+    <span class="indentWide variable">self</span>.<span class="variable">deets</span> = <span class="variable">deets</span><br/>
+    <span class="indentWide variable">self</span>.<span class="variable">favorite_project</span> = <span class="variable">favorite_project</span><br/>
+    <span class="indentWide variable">self</span>.<span class="variable">url</span> = <span class="variable">url</span><br/>
+    <span class="indentWide variable">self</span>.<span class="variable">alive_today</span> = <span class="variable">alive_today</span><br/>
+end
+<p>end</p>
+
+<p>class <span class="variable">AndrewKreps</span></p>
+<p class="indentNominal">attr_accessor
+    <span class="label">:jobs</span>,
+    <span class="label">:first_year</span>,
+    <span class="label">:contact_block</span>,
+    <span class="label">:skills</span>
+</p>
+
+<p class="indentNominal"><span class="variable">@@role</span> = <span class="label">:i_am_a_coder</span></p>  <!-- # Yeah, class vars.  The odds of subclassing myself are very slim in the near term.  :) -->
+
+<p class="indentNominal">
+def <span class="function">initialize</span><br/>
+    <span class="variable indentNominal">self.jobs</span> <span class="languageItem"> = []</span><br/>
+    <span class="variable indentNominal">self.skills</span> <span class="languageItem"> = []</span><br/>
+end
+</p>
+
+<p class="indentNominal">
+def <span class="function">professional_experience</span><br/>
+    <span class="string indentNominal">"about#{Time.now.year - self.first_year}years"</span>[<span class="regex">/\d{2}/</span>]<br/>
+end
+<!-- # I'm a little torn on exceptionally long variable names, but functions that are named exactly what they do are essential. -->
+</p>                                                           <!-- # p.s. I heart regex :) -->
+
+<p class="indentNominal">
+def <span class="function">key_qualities</span><br/>
+<span class="indentNominal"> [</span>
+    <span class="string">'Avid, quick learner.'</span>,<br/>
+        <span class="indentNominalPlus string">'I think different.  So different I don\'t even use the word differently.'</span>,<br/>
+        <span class="indentNominalPlus string">'Problem solver.'</span>,<br/>
+        <span class="indentNominalPlus string">'"I\'m asking you this question because you\'re the best combination of knowledgable and non-threatening." - Ellie, co-worker'</span>,<br/>
+        <span class="indentNominalPlus string">'Patient, mentoring personality.'</span>]<br/>
+end</p>
+end
+
+<pre><!-- // Multi-line spans?  Yep.  You betchya.  Makes my life easier and I'm the only code maintainer.  :) -->
+<span class="variable">andrew</span> = <span class="variable">AndrewKreps</span>.new<br/>
+<span class="variable">andrew.first_year</span> = 1996<br/>
+<span class="variable">andrew.contact_block</span> = &lt;&lt;INFO; <!-- # Heredoc is one of my favorite things. It really cleans up the readability of the code at times. And it's super fun to say! -->
+<span class="string indentNominal">Andrew Kreps</span>
+<span class="string indentNominal">(503) 544-3412</span>
+<span class="string indentNominal">andrew.kreps@gmail.com</span> <!-- # Don't forget to install the gmail mailto: extension, otherwise OSX will open Mail, again. -->
+<span class="string indentNominal">Portland, OR</span>
+INFO  <!-- # end Heredoc -->
+
+<span class="variable">andrew.skills</span> =
+    [<span class="string">'Devops'</span>,
+     <span class="string">'Multiple language fluency'</span>,
+     <span class="string">'Planning and project management'</span>,
+     <span class="string">'Iterative methodology'</span>,
+     <span class="string">'Testable code'</span>,
+     <span class="string">'Service-oriented Architectural high-performance buzzwords'</span>]
+
+<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+    <span class="string">'Symphony Group'</span>,
+    <span class="string">2</span>,
+    <span class="string">'Small shop, 3 guys.  I taught myself how to write Perl code, literally, overnight.'</span>,
+    <span class="string">'Writing a C program to decode a DBF byte-by-byte to determine customers\' frequent buyer club status.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://web.archive.org/web/19970413023111/http://www.symgrp.com/">http://web.archive.org/web/19970413023111/http://www.symgrp.com/</a>'</span>,
+    <span class="boolean">false</span>)    <!--<span class="languageItem">break;</span>  &lt;!&ndash; For some reason, the iPhone doesn't tolerate the lack of a span on this line.  It spaces it funny.  Hance, the extra span. &ndash;&gt;-->
+
+<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+    <span class="string">"DVD Express"</span>,
+    <span class="string">3</span>,
+    <span class="string">'Bootstrapped startup- I did everything from being lead developer to automating business processes.'</span>,
+    <span class="string">'Creating a pseudo-random coupon code generator.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://web.archive.org/web/*/dvdexpress.com">http://web.archive.org/web/*/dvdexpress.com</a>'</span>,
+    <span class="boolean">false</span>)
+
+<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+    <span class="string">"Nike"</span>,
+    <span class="string">2</span>,
+    <span class="string">"Niketown.com, a haven of servlets and sports."</span>,
+    <span class="string">'Learning Java after 3 years of VBScript was one of the most interesting challenges I\'ve ever undertaken.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://store.nike.com/us/en_us/#n">http://store.nike.com/us/en_us/#n</a>'</span>,
+    <span class="boolean">true</span>)
+
+<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+    <span class="string">"Monsoon"</span>,
+    <span class="string">2</span>,
+    <span class="string">"My first responsibility was website development, and this is where I started learning about devops."</span>,
+    <span class="string">'Taking our monstrosity of a static HTML website into the future with some magic PHP code.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://www.monsoonworks.com">http://www.monsoonworks.com</a>'</span>,
+    <span class="boolean">true</span>)
+
+<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+    <span class="string">"Symantec"</span>,
+    <span class="string">2</span>,
+    <span class="string">"I pieced together large chunks of Java.  It was here I developed an appreciation for reusable code."</span>,
+    <span class="string">'Threw ant out in favor of Maven, taking us to a one-button deploy.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://buy.norton.com/en-us/mf/upgradeRenewal">http://buy.norton.com/en-us/mf/upgradeRenewal</a>'</span>,
+    <span class="boolean">true</span>)
+
+<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+    <span class="string">"Cambia (then Regence Blue Cross Blue Shield<span class="subscript">(tm) (r) (etc)</span>)"</span>,
+    <span class="string">4</span>,
+    <span class="string">"I worked my way up to decision maker, senior developer, project leader."</span>,
+    <span class="string">'Hubbub Health, the first of many in-shop startups.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="https://www.hubbubhealth.com/">https://www.hubbubhealth.com/</a>'</span>,
+    <span class="boolean">true</span>)
+
+<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+    <span class="string">"Shopigniter"</span>,
+    <span class="string">2</span>,
+    <span class="string">"Not quite a commerce shop and not quite an interactive agency, there was always something interesting to do here."</span>,
+    <span class="string">'Rewriting our pricing code to be testable and absolutely deterministic.  I\'m a glutton for punishment.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://shopigniter.com">http://shopigniter.com</a>'</span>,
+    <span class="boolean">true</span>)
+
+<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+    <span class="string">"Athletepath"</span>,
+    <span class="string">2</span>,
+    <span class="string">"Results and data management, product development."</span>,
+    <span class="string">'Building out our near-RESTful data api for bulk result imports and live streaming.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="https://www.athletepath.com">https://www.athletepath.com</a>'</span>,
+    <span class="boolean">true</span>)
+</pre>
+<hr/>
+<br/>
+<pre>
+def <span class="function">pretty_print_header_text</span>(<span class="variable">text</span>, <span class="variable">width</span>)
+    <span class="variable">pre_dashes</span> = <span class="string">5</span>
+    <span class="variable">text</span> = <span class="string"> " #{text} "</span>
+    <span class="variable">right_side_dashes_width</span> = <span class="variable">width</span> - <span class="variable">text</span>.length - <span class="variable">pre_dashes</span>
+    puts [<span class="string">'|'</span>,
+          <span class="string">'-'</span> * <span class="variable">pre_dashes</span>,
+          <span class="variable">text</span>,
+          <span class="string">'-'</span> * <span class="variable">right_side_dashes_width</span>,
+          <span class="string">'|'</span>]
+          .pack(<span class="string">"A1A5A#{</span><span class="variable">text</span>.length<span class="string">}A#{</span><span class="variable">right_side_dashes_width</span><span class="string">}A1"</span>)
+end
+
+def <span class="function">pretty_print_header_char</span>(<span class="variable">edge_char</span>, <span class="variable">char</span>, <span class="variable">width</span>)
+    puts [<span class="variable">edge_char</span>, <span class="variable">char</span> * <span class="variable">width</span>, <span class="variable">edge_char</span>].pack(<span class="string">"A1A#{</span><span class="variable">width</span><span class="string">}A1"</span>)
+end
+
+def <span class="function">pretty_print_text</span>(<span class="variable">text</span>, <span class="variable">width</span>)
+    puts [<span class="string">'|'</span>, <span class="variable">text</span>, <span class="string">'|'</span>].pack(<span class="string">"A2A#{</span><span class="variable">width</span> - 1<span class="string">}A1"</span>)
+end
+
+def <span class="function">print_empty_line</span>(<span class="variable">width</span>)
+    <span class="function">pretty_print_header_char</span>(<span class="string">'|'</span>, <span class="string">' '</span>, <span class="variable">width</span>)
+end
+
+def <span class="function">print_header_line</span>(<span class="variable">width</span>)
+    <span class="function">pretty_print_header_char</span>(<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="variable">width</span>)
+end
+
+<span class="variable">width</span> = <span class="string">128</span> # Allow for the border.
+
+<span class="function">pretty_print_header_char</span>(<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="variable">width</span>)
+
+<span class="variable">andrew.contact_block</span>.split(<span class="regex">/\n/</span>).each do |<span class="variable">line</span>|
+    <span class="function">pretty_print_text</span>(<span class="variable">line</span>, <span class="variable">width</span>)
+end
+
+<span class="function">print_header_line</span> <span class="variable">width</span>
+<span class="function">pretty_print_text</span>(<span class="string">"I've been writing code for #{</span><span class="variable">andrew</span>.<span class="variable">professional_experience</span><span class="string">} years, and I rather quite enjoy it."</span>, <span class="variable">width</span>)
+<span class="function">print_header_line</span> <span class="variable">width</span>
+<span class="function">pretty_print_header_text</span>(<span class="string">'Key Qualities'</span>, <span class="variable">width</span>)
+<span class="function">print_empty_line</span> <span class="variable">width</span>
+
+<span class="variable">andrew.key_qualities</span>.each_with_index do |<span class="variable">quality</span>, <span class="variable">index</span>|
+    <span class="comment"># Yeah, my list is 0 indexed. Have you read line 21 (or 22, if you prefer) of my resume?</span>
+    <span class="function">pretty_print_text</span>(<span class="string">"#{</span><span class="variable">index</span><span class="string">}. #{</span><span class="variable">quality</span><span class="string">}"</span>, <span class="variable">width</span>)
+end
+
+<span class="function">print_empty_line</span> <span class="variable">width</span>
+<span class="function">print_header_line</span> <span class="variable">width</span>
+<span class="function">pretty_print_header_text</span>(<span class="string">'Core Skills'</span>, <span class="variable">width</span>)
+<span class="function">print_empty_line</span> <span class="variable">width</span>
+
+<span class="variable">andrew.skills</span>.each_with_index do |<span class="variable">skill</span>, <span class="variable">index</span>|
+    <span class="function">pretty_print_text</span>(<span class="string">"#{</span>(<span class="variable">index</span> + <span class="string">97</span>).chr<span class="string">}. #{</span><span class="variable">skill</span><span class="string">}"</span>, <span class="variable">width</span>)  <!-- # Buffer overflow?  What's that?  :) -->
+end
+
+<span class="function">print_empty_line</span> <span class="variable">width</span>
+<span class="function">print_header_line</span> <span class="variable">width</span>
+<span class="function">pretty_print_header_text</span>(<span class="string">'Job History'</span>, <span class="variable">width</span>)
+<span class="function">print_empty_line</span> <span class="variable">width</span>
+
+<span class="variable">running_year_tab</span> = <span class="string">0</span>
+<span class="variable">andrew.jobs</span>.each_with_index do |<span class="variable">job</span>, <span class="variable">index</span>|
+    <span class="function">pretty_print_text</span>(<span class="string">"#{</span><span class="variable">job</span>.<span class="variable">company</span><span class="string">}, #{</span><span class="variable">andrew</span>.<span class="variable">first_year</span> + <span class="variable">running_year_tab</span><span class="string">}"</span>, <span class="variable">width</span>)
+    <span class="function">pretty_print_text</span>(<span class="string">"    #{</span><span class="variable">job</span>.<span class="variable">deets</span><span class="string">}"</span>, <span class="variable">width</span>)
+    <span class="function">pretty_print_text</span>(<span class="string">"    Favorite Project: #{</span><span class="variable">job</span>.<span class="variable">favorite_project</span><span class="string">}"</span>, <span class="variable">width</span>)
+    <span class="function">print_empty_line</span> <span class="variable">width</span>
+    <span class="variable">running_year_tab</span> += <span class="variable">job</span>.<span class="variable">timespan_years</span>
+end
+<span class="function">pretty_print_header_char</span>(<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="variable">width</span>)
+
+</pre>
+    </body>
+</html>
