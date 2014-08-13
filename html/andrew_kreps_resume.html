@@ -49,8 +49,8 @@ end
 
 <p class="indentNominal">
 def <span class="function">initialize</span><br/>
-    <span class="variable indentNominal">self.jobs</span> <span class="languageItem"> = []</span><br/>
-    <span class="variable indentNominal">self.skills</span> <span class="languageItem"> = []</span><br/>
+    <span class="variable indentNominal">self</span>.<span class="variable">jobs</span> <span class="languageItem"> = []</span><br/>
+    <span class="variable indentNominal">self</span>.<span class="variable">skills</span> <span class="languageItem"> = []</span><br/>
 end
 </p>
 
@@ -74,15 +74,15 @@ end
 
 <pre><!-- // Multi-line spans?  Yep.  You betchya.  Makes my life easier and I'm the only code maintainer.  :) -->
 <span class="variable">andrew</span> = <span class="variable">AndrewKreps</span>.new<br/>
-<span class="variable">andrew.first_year</span> = 1996<br/>
-<span class="variable">andrew.contact_block</span> = &lt;&lt;INFO; <!-- # Heredoc is one of my favorite things. It really cleans up the readability of the code at times. And it's super fun to say! -->
+<span class="variable">andrew</span>.<span class="variable">first_year</span> = 1996<br/>
+<span class="variable">andrew</span>.<span class="variable">contact_block</span> = &lt;&lt;INFO; <!-- # Heredoc is one of my favorite things. It really cleans up the readability of the code at times. And it's super fun to say! -->
 <span class="string indentNominal">Andrew Kreps</span>
 <span class="string indentNominal">(503) 544-3412</span>
 <span class="string indentNominal">andrew.kreps@gmail.com</span> <!-- # Don't forget to install the gmail mailto: extension, otherwise OSX will open Mail, again. -->
 <span class="string indentNominal">Portland, OR</span>
 INFO  <!-- # end Heredoc -->
 
-<span class="variable">andrew.skills</span> =
+<span class="variable">andrew</span>.<span class="variable">skills</span> =
     [<span class="string">'Devops'</span>,
      <span class="string">'Multiple language fluency'</span>,
      <span class="string">'Planning and project management'</span>,
@@ -90,7 +90,7 @@ INFO  <!-- # end Heredoc -->
      <span class="string">'Testable code'</span>,
      <span class="string">'Service-oriented Architectural high-performance buzzwords'</span>]
 
-<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">'Symphony Group'</span>,
     <span class="string">2</span>,
     <span class="string">'Small shop, 3 guys.  I taught myself how to write Perl code, literally, overnight.'</span>,
@@ -98,7 +98,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">'<a class="string" target="andrewsresume" href="http://web.archive.org/web/19970413023111/http://www.symgrp.com/">http://web.archive.org/web/19970413023111/http://www.symgrp.com/</a>'</span>,
     <span class="boolean">false</span>)    <!--<span class="languageItem">break;</span>  &lt;!&ndash; For some reason, the iPhone doesn't tolerate the lack of a span on this line.  It spaces it funny.  Hance, the extra span. &ndash;&gt;-->
 
-<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"DVD Express"</span>,
     <span class="string">3</span>,
     <span class="string">'Bootstrapped startup- I did everything from being lead developer to automating business processes.'</span>,
@@ -106,7 +106,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">'<a class="string" target="andrewsresume" href="http://web.archive.org/web/*/dvdexpress.com">http://web.archive.org/web/*/dvdexpress.com</a>'</span>,
     <span class="boolean">false</span>)
 
-<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"Nike"</span>,
     <span class="string">2</span>,
     <span class="string">"Niketown.com, a haven of servlets and sports."</span>,
@@ -114,7 +114,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">'<a class="string" target="andrewsresume" href="http://store.nike.com/us/en_us/#n">http://store.nike.com/us/en_us/#n</a>'</span>,
     <span class="boolean">true</span>)
 
-<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"Monsoon"</span>,
     <span class="string">2</span>,
     <span class="string">"My first responsibility was website development, and this is where I started learning about devops."</span>,
@@ -122,7 +122,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">'<a class="string" target="andrewsresume" href="http://www.monsoonworks.com">http://www.monsoonworks.com</a>'</span>,
     <span class="boolean">true</span>)
 
-<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"Symantec"</span>,
     <span class="string">2</span>,
     <span class="string">"I pieced together large chunks of Java.  It was here I developed an appreciation for reusable code."</span>,
@@ -130,7 +130,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">'<a class="string" target="andrewsresume" href="http://buy.norton.com/en-us/mf/upgradeRenewal">http://buy.norton.com/en-us/mf/upgradeRenewal</a>'</span>,
     <span class="boolean">true</span>)
 
-<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"Cambia (then Regence Blue Cross Blue Shield<span class="subscript">(tm) (r) (etc)</span>)"</span>,
     <span class="string">4</span>,
     <span class="string">"I worked my way up to decision maker, senior developer, project leader."</span>,
@@ -138,7 +138,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">'<a class="string" target="andrewsresume" href="https://www.hubbubhealth.com/">https://www.hubbubhealth.com/</a>'</span>,
     <span class="boolean">true</span>)
 
-<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"Shopigniter"</span>,
     <span class="string">2</span>,
     <span class="string">"Not quite a commerce shop and not quite an interactive agency, there was always something interesting to do here."</span>,
@@ -146,7 +146,15 @@ INFO  <!-- # end Heredoc -->
     <span class="string">'<a class="string" target="andrewsresume" href="http://shopigniter.com">http://shopigniter.com</a>'</span>,
     <span class="boolean">true</span>)
 
-<span class="variable">andrew.jobs</span><span class="languageItem">.push Job.new(</span>
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
+    <span class="string">"Geekbench"</span>,
+    <span class="string">0.4</span>,
+    <span class="string">"Industry-leading benchmark software."</span>,
+    <span class="string">'Taking their website from Rails 2 to 3, and moving the data format from XML to JSON.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://www.primatelabs.com/geekbench/">http://www.primatelabs.com/geekbench</a>'</span>,
+    <span class="boolean">true</span>)
+
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"Athletepath"</span>,
     <span class="string">2</span>,
     <span class="string">"Results and data management, product development."</span>,
@@ -224,7 +232,7 @@ end
     <span class="function">pretty_print_text</span>(<span class="string">"    #{</span><span class="variable">job</span>.<span class="variable">deets</span><span class="string">}"</span>, <span class="variable">width</span>)
     <span class="function">pretty_print_text</span>(<span class="string">"    Favorite Project: #{</span><span class="variable">job</span>.<span class="variable">favorite_project</span><span class="string">}"</span>, <span class="variable">width</span>)
     <span class="function">print_empty_line</span> <span class="variable">width</span>
-    <span class="variable">running_year_tab</span> += <span class="variable">job</span>.<span class="variable">timespan_years</span>
+    <span class="variable">running_year_tab</span> += <span class="variable">job</span>.<span class="variable">timespan_years</span>.<span class="function">to_i</span>
 end
 <span class="function">pretty_print_header_char</span>(<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="variable">width</span>)
 
