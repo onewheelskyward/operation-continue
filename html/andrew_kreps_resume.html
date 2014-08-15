@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="x.css" />
     </head>
     <body>
-<div class="comment">#v2014.07.24</div>
+<div class="comment">#v2014.08.11</div>
 <div class="comment">#require_relative 'perfect_resume_header'</div>
 
 <p>
@@ -132,7 +132,7 @@ INFO  <!-- # end Heredoc -->
 
 <span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"Cambia (then Regence Blue Cross Blue Shield<span class="subscript">(tm) (r) (etc)</span>)"</span>,
-    <span class="string">4</span>,
+    <span class="string">3<span class="7"></span></span>,
     <span class="string">"I worked my way up to decision maker, senior developer, project leader."</span>,
     <span class="string">'Hubbub Health, the first of many in-shop startups.'</span>,
     <span class="string">'<a class="string" target="andrewsresume" href="https://www.hubbubhealth.com/">https://www.hubbubhealth.com/</a>'</span>,
@@ -147,20 +147,21 @@ INFO  <!-- # end Heredoc -->
     <span class="boolean">true</span>)
 
 <span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
-    <span class="string">"Geekbench"</span>,
-    <span class="string">0.4</span>,
-    <span class="string">"Industry-leading benchmark software."</span>,
-    <span class="string">'Taking their website from Rails 2 to 3, and moving the data format from XML to JSON.'</span>,
-    <span class="string">'<a class="string" target="andrewsresume" href="http://www.primatelabs.com/geekbench/">http://www.primatelabs.com/geekbench</a>'</span>,
-    <span class="boolean">true</span>)
-
-<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
     <span class="string">"Athletepath"</span>,
-    <span class="string">2</span>,
+    <span class="string">1.75</span>,
     <span class="string">"Results and data management, product development."</span>,
     <span class="string">'Building out our near-RESTful data api for bulk result imports and live streaming.'</span>,
     <span class="string">'<a class="string" target="andrewsresume" href="https://www.athletepath.com">https://www.athletepath.com</a>'</span>,
     <span class="boolean">true</span>)
+
+<span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
+    <span class="string">"Geekbench"</span>,
+    <span class="string">0.4</span>,
+    <span class="string">"Industry-leading benchmark software."</span>,
+    <span class="string">'Taking their website from Rails 2 to 3, and moving the received data format from XML to JSON.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://www.primatelabs.com/geekbench/">http://www.primatelabs.com/geekbench</a>'</span>,
+    <span class="boolean">true</span>)
+
 </pre>
 <hr/>
 <br/>
@@ -168,21 +169,21 @@ INFO  <!-- # end Heredoc -->
 def <span class="function">pretty_print_header_text</span>(<span class="variable">text</span>, <span class="variable">width</span>)
     <span class="variable">pre_dashes</span> = <span class="string">5</span>
     <span class="variable">text</span> = <span class="string"> " #{text} "</span>
-    <span class="variable">right_side_dashes_width</span> = <span class="variable">width</span> - <span class="variable">text</span>.length - <span class="variable">pre_dashes</span>
+    <span class="variable">right_side_dashes_width</span> = <span class="variable">width</span> - <span class="variable">text</span>.<span class="function">length</span> - <span class="variable">pre_dashes</span>
     puts [<span class="string">'|'</span>,
           <span class="string">'-'</span> * <span class="variable">pre_dashes</span>,
           <span class="variable">text</span>,
           <span class="string">'-'</span> * <span class="variable">right_side_dashes_width</span>,
           <span class="string">'|'</span>]
-          .pack(<span class="string">"A1A5A#{</span><span class="variable">text</span>.length<span class="string">}A#{</span><span class="variable">right_side_dashes_width</span><span class="string">}A1"</span>)
+          .<span class="function">pack</span>(<span class="string">"A1A5A#{</span><span class="variable">text</span>.<span class="function">length</span><span class="string">}A#{</span><span class="variable">right_side_dashes_width</span><span class="string">}A1"</span>)
 end
 
 def <span class="function">pretty_print_header_char</span>(<span class="variable">edge_char</span>, <span class="variable">char</span>, <span class="variable">width</span>)
-    puts [<span class="variable">edge_char</span>, <span class="variable">char</span> * <span class="variable">width</span>, <span class="variable">edge_char</span>].pack(<span class="string">"A1A#{</span><span class="variable">width</span><span class="string">}A1"</span>)
+    puts [<span class="variable">edge_char</span>, <span class="variable">char</span> * <span class="variable">width</span>, <span class="variable">edge_char</span>].<span class="function">pack</span>(<span class="string">"A1A#{</span><span class="variable">width</span><span class="string">}A1"</span>)
 end
 
 def <span class="function">pretty_print_text</span>(<span class="variable">text</span>, <span class="variable">width</span>)
-    puts [<span class="string">'|'</span>, <span class="variable">text</span>, <span class="string">'|'</span>].pack(<span class="string">"A2A#{</span><span class="variable">width</span> - 1<span class="string">}A1"</span>)
+    puts [<span class="string">'|'</span>, <span class="variable">text</span>, <span class="string">'|'</span>].<span class="function">pack</span>(<span class="string">"A2A#{</span><span class="variable">width</span> - 1<span class="string">}A1"</span>)
 end
 
 def <span class="function">print_empty_line</span>(<span class="variable">width</span>)
@@ -197,7 +198,7 @@ end
 
 <span class="function">pretty_print_header_char</span>(<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="variable">width</span>)
 
-<span class="variable">andrew.contact_block</span>.split(<span class="regex">/\n/</span>).each do |<span class="variable">line</span>|
+<span class="variable">andrew.contact_block</span>.split(<span class="regex">/\n/</span>).<span class="function">each</span> do |<span class="variable">line</span>|
     <span class="function">pretty_print_text</span>(<span class="variable">line</span>, <span class="variable">width</span>)
 end
 
@@ -207,7 +208,7 @@ end
 <span class="function">pretty_print_header_text</span>(<span class="string">'Key Qualities'</span>, <span class="variable">width</span>)
 <span class="function">print_empty_line</span> <span class="variable">width</span>
 
-<span class="variable">andrew.key_qualities</span>.each_with_index do |<span class="variable">quality</span>, <span class="variable">index</span>|
+<span class="variable">andrew.key_qualities</span>.<span class="function">each_with_index</span> do |<span class="variable">quality</span>, <span class="variable">index</span>|
     <span class="comment"># Yeah, my list is 0 indexed. Have you read line 21 (or 22, if you prefer) of my resume?</span>
     <span class="function">pretty_print_text</span>(<span class="string">"#{</span><span class="variable">index</span><span class="string">}. #{</span><span class="variable">quality</span><span class="string">}"</span>, <span class="variable">width</span>)
 end
@@ -217,8 +218,8 @@ end
 <span class="function">pretty_print_header_text</span>(<span class="string">'Core Skills'</span>, <span class="variable">width</span>)
 <span class="function">print_empty_line</span> <span class="variable">width</span>
 
-<span class="variable">andrew.skills</span>.each_with_index do |<span class="variable">skill</span>, <span class="variable">index</span>|
-    <span class="function">pretty_print_text</span>(<span class="string">"#{</span>(<span class="variable">index</span> + <span class="string">97</span>).chr<span class="string">}. #{</span><span class="variable">skill</span><span class="string">}"</span>, <span class="variable">width</span>)  <!-- # Buffer overflow?  What's that?  :) -->
+<span class="variable">andrew.skills</span>.<span class="function">each_with_index</span> do |<span class="variable">skill</span>, <span class="variable">index</span>|
+    <span class="function">pretty_print_text</span>(<span class="string">"#{</span>(<span class="variable">index</span> + <span class="string">97</span>).<span class="function">chr</span><span class="string">}. #{</span><span class="variable">skill</span><span class="string">}"</span>, <span class="variable">width</span>)  <!-- # Buffer overflow?  What's that?  :) -->
 end
 
 <span class="function">print_empty_line</span> <span class="variable">width</span>
@@ -227,7 +228,7 @@ end
 <span class="function">print_empty_line</span> <span class="variable">width</span>
 
 <span class="variable">running_year_tab</span> = <span class="string">0</span>
-<span class="variable">andrew.jobs</span>.each_with_index do |<span class="variable">job</span>, <span class="variable">index</span>|
+<span class="variable">andrew.jobs</span>.<span class="function">each_with_index</span> do |<span class="variable">job</span>, <span class="variable">index</span>|
     <span class="function">pretty_print_text</span>(<span class="string">"#{</span><span class="variable">job</span>.<span class="variable">company</span><span class="string">}, #{</span><span class="variable">andrew</span>.<span class="variable">first_year</span> + <span class="variable">running_year_tab</span><span class="string">}"</span>, <span class="variable">width</span>)
     <span class="function">pretty_print_text</span>(<span class="string">"    #{</span><span class="variable">job</span>.<span class="variable">deets</span><span class="string">}"</span>, <span class="variable">width</span>)
     <span class="function">pretty_print_text</span>(<span class="string">"    Favorite Project: #{</span><span class="variable">job</span>.<span class="variable">favorite_project</span><span class="string">}"</span>, <span class="variable">width</span>)
