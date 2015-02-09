@@ -6,8 +6,9 @@
         <link rel="stylesheet" type="text/css" href="x.css" />
     </head>
     <body>
-<div class="comment">#v2015.01.06</div>
+<div class="comment">#v2015.02.01</div>
 <div class="comment">#require_relative 'perfect_resume_header'</div>
+<div class="comment">#<a href="andrew_kreps_resume.txt">Why yes, it does run</a>.</div>
 
 <p>
 class <span class="variable">Job</span></p>
@@ -64,8 +65,8 @@ end
 def <span class="function">key_qualities</span><br/>
 <span class="indentNominal"> [</span>
     <span class="string">'Avid, quick learner.'</span>,<br/>
-        <span class="indentNominalPlus string">'I think different.  So different I don\'t even use the word differently.'</span>,<br/>
-        <span class="indentNominalPlus string">'Problem solver.'</span>,<br/>
+        <span class="indentNominalPlus string">'Gamer, Photographer, Musician.'</span>,<br/>
+        <span class="indentNominalPlus string">'Creative solutions to problems are just the way my brain works.'</span>,<br/>
         <span class="indentNominalPlus string">'"I\'m asking you this question because you\'re the best combination of knowledgable and non-threatening." - Ellie, co-worker'</span>,<br/>
         <span class="indentNominalPlus string">'Patient, mentoring personality.'</span>]<br/>
 end</p>
@@ -134,7 +135,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">3<span class="7"></span></span>,
     <span class="string">"I worked my way up to decision maker, senior developer, project leader."</span>,
     <span class="string">'Hubbub Health, the first of many in-shop startups.'</span>,
-    <span class="string">'<a class="string" target="andrewsresume" href="https://www.hubbubhealth.com/">https://www.hubbubhealth.com/</a>'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="https://www.hubbubhealth.com">https://www.hubbubhealth.com</a>'</span>,
     <span class="boolean">true</span>)
 
 <span class="variable">andrew</span>.<span class="variable">jobs</span><span class="languageItem">.<span class="function">push</span> Job.<span class="function">new</span>(</span>
@@ -165,13 +166,14 @@ INFO  <!-- # end Heredoc -->
     <span class="string">"Wieden + Kennedy"</span>,
     <span class="string">0.4</span>,
     <span class="string">"International Marketing Agency"</span>,
-    <span class="string">'Backend Java development for a national campaign.'</span>,
-    <span class="string">'<a class="string" target="andrewsresume" href="http://www.wk.com/">http://www.wk.com</a>'</span>,
+    <span class="string">'Back-end Java development for a national campaign.'</span>,
+    <span class="string">'<a class="string" target="andrewsresume" href="http://www.gomakeithappy.com">http://www.gomakeithappy.com</a>'</span>,
     <span class="boolean">true</span>)
 
 </pre>
 <hr/>
 <br/>
+<div class="comment"># Utility functions and script execution start</div>
 <pre>
 def <span class="function">pretty_print_header_text</span>(<span class="variable">text</span>, <span class="variable">width</span>)
     <span class="variable">pre_dashes</span> = <span class="string">5</span>
@@ -216,7 +218,7 @@ end
 <span class="function">print_empty_line</span> <span class="variable">width</span>
 
 <span class="variable">andrew.key_qualities</span>.<span class="function">each_with_index</span> do |<span class="variable">quality</span>, <span class="variable">index</span>|
-    <span class="comment"># Yeah, my list is 0 indexed. Have you read line 21 (or 22, if you prefer) of my resume?</span>
+    <span class="comment"># Yeah, my list is 0 indexed. Have you read line 47 (or 48, if you prefer) of my resume?</span>
     <span class="function">pretty_print_text</span>(<span class="string">"#{</span><span class="variable">index</span><span class="string">}. #{</span><span class="variable">quality</span><span class="string">}"</span>, <span class="variable">width</span>)
 end
 
@@ -236,11 +238,11 @@ end
 
 <span class="variable">running_year_tab</span> = <span class="string">0</span>
 <span class="variable">andrew.jobs</span>.<span class="function">each_with_index</span> do |<span class="variable">job</span>, <span class="variable">index</span>|
-    <span class="function">pretty_print_text</span>(<span class="string">"#{</span><span class="variable">job</span>.<span class="variable">company</span><span class="string">}, #{</span><span class="variable">andrew</span>.<span class="variable">first_year</span> + <span class="variable">running_year_tab</span><span class="string">}"</span>, <span class="variable">width</span>)
+    <span class="function">pretty_print_text</span>(<span class="string">"#{</span><span class="variable">job</span>.<span class="variable">company</span><span class="string">}, #{</span><span class="variable">andrew</span>.<span class="variable">first_year</span> + <span class="variable">running_year_tab</span>.<span class="function">to_i</span><span class="string">}"</span>, <span class="variable">width</span>)
     <span class="function">pretty_print_text</span>(<span class="string">"    #{</span><span class="variable">job</span>.<span class="variable">deets</span><span class="string">}"</span>, <span class="variable">width</span>)
     <span class="function">pretty_print_text</span>(<span class="string">"    Favorite Project: #{</span><span class="variable">job</span>.<span class="variable">favorite_project</span><span class="string">}"</span>, <span class="variable">width</span>)
     <span class="function">print_empty_line</span> <span class="variable">width</span>
-    <span class="variable">running_year_tab</span> += <span class="variable">job</span>.<span class="variable">timespan_years</span>.<span class="function">to_i</span>
+    <span class="variable">running_year_tab</span> += <span class="variable">job</span>.<span class="variable">timespan_years</span>
 end
 <span class="function">pretty_print_header_char</span>(<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="variable">width</span>)
 
