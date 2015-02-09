@@ -1,7 +1,7 @@
 body {
     font-family: Monospace, Courier New, serif;
     font-size: large;
-    background-color: #ffffcc;  /* You might call it a holdover from the 8-bit color days.  I call it easier to type. */
+    background-color: #ffffdd;  /* You might call it a holdover from the 8-bit color days.  I call it easier to type. */
     color: #666666;
 }
 pre {
@@ -9,13 +9,13 @@ pre {
     font-size: large;
 }
 a:link {
-    color: #FF5555;
+    color: #DD5555;
 }
 a:visited {
-    color: #FF6666;
+    color: #DD6666;
 }
 a:hover {
-    color: #FF3333;
+    color: #DD3333;
 }
 .indentWide {
     margin-left: 80px;

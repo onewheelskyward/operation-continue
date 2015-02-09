@@ -34,7 +34,7 @@ class <span class="variable">Job</span></p>
     <span class="indentWide variable">self</span>.<span class="variable">favorite_project</span> = <span class="variable">favorite_project</span><br/>
     <span class="indentWide variable">self</span>.<span class="variable">url</span> = <span class="variable">url</span><br/>
     <span class="indentWide variable">self</span>.<span class="variable">alive_today</span> = <span class="variable">alive_today</span><br/>
-end
+    end
 <p>end</p>
 
 <p>class <span class="variable">AndrewKreps</span></p>
@@ -48,37 +48,37 @@ end
 <p class="indentNominal"><span class="variable">@@role</span> = <span class="label">:i_am_a_coder</span></p>  <!-- # Yeah, class vars.  The odds of subclassing myself are very slim in the near term.  :) -->
 
 <p class="indentNominal">
-def <span class="function">initialize</span><br/>
-    <span class="variable indentNominal">self</span>.<span class="variable">jobs</span> <span class="languageItem"> = []</span><br/>
-    <span class="variable indentNominal">self</span>.<span class="variable">skills</span> <span class="languageItem"> = []</span><br/>
-end
+    def <span class="function">initialize</span><br/>
+        <span class="variable indentNominal">self</span>.<span class="variable">jobs</span> <span class="languageItem"> = []</span><br/>
+        <span class="variable indentNominal">self</span>.<span class="variable">skills</span> <span class="languageItem"> = []</span><br/>
+    end
 </p>
 
 <p class="indentNominal">
-def <span class="function">professional_experience</span><br/>
-    <span class="string indentNominal">"about#{Time.now.year - self.first_year}years"</span>[<span class="regex">/\d{2}/</span>]<br/>
-end
-<!-- # I'm a little torn on exceptionally long variable names, but functions that are named exactly what they do are essential. -->
+    def <span class="function">professional_experience</span><br/>
+        <span class="string indentNominal">"about#{Time.now.year - self.first_year}years"</span>[<span class="regex">/\d{2}/</span>]<br/>
+    end
+    <!-- # I'm a little torn on exceptionally long variable names, but functions that are named exactly what they do are essential. -->
 </p>                                                           <!-- # p.s. I heart regex :) -->
 
 <p class="indentNominal">
-def <span class="function">key_qualities</span><br/>
-<span class="indentNominal"> [</span>
-    <span class="string">'Avid, quick learner.'</span>,<br/>
-        <span class="indentNominalPlus string">'Gamer, Photographer, Musician.'</span>,<br/>
-        <span class="indentNominalPlus string">'Creative solutions to problems are just the way my brain works.'</span>,<br/>
-        <span class="indentNominalPlus string">'"I\'m asking you this question because you\'re the best combination of knowledgable and non-threatening." - Ellie, co-worker'</span>,<br/>
-        <span class="indentNominalPlus string">'Patient, mentoring personality.'</span>]<br/>
-end</p>
+    def <span class="function">key_qualities</span><br/>
+    <span class="indentNominal"> [</span>
+        <span class="string">'Avid, quick learner.'</span>,<br/>
+            <span class="indentNominalPlus string">'Gamer, Photographer, Musician.'</span>,<br/>
+            <span class="indentNominalPlus string">'Creative solutions to problems are just the way my brain works.'</span>,<br/>
+            <span class="indentNominalPlus string">'"I\'m asking you this question because you\'re the best combination of knowledgable and non-threatening." - Ellie, co-worker'</span>,<br/>
+            <span class="indentNominalPlus string">'Patient, mentoring personality.'</span>]<br/>
+    end</p>
 end
 
-<pre><!-- // Multi-line spans?  Yep.  You betchya.  Makes my life easier and I'm the only code maintainer.  :) -->
+<pre>
 <span class="variable">andrew</span> = <span class="variable">AndrewKreps</span>.new<br/>
 <span class="variable">andrew</span>.<span class="variable">first_year</span> = 1996<br/>
 <span class="variable">andrew</span>.<span class="variable">contact_block</span> = &lt;&lt;INFO; <!-- # Heredoc is one of my favorite things. It really cleans up the readability of the code at times. And it's super fun to say! -->
 <span class="string indentNominal">Andrew Kreps</span>
 <span class="string indentNominal">(503) 544-3412</span>
-<span class="string indentNominal">andrew.kreps@gmail.com</span> <!-- # Don't forget to install the gmail mailto: extension, otherwise OSX will open Mail, again. -->
+<span class="string indentNominal"><a href="mailto:andrew.kreps@gmail.com">andrew.kreps@gmail.com</a></span> <!-- # Don't forget to install the gmail mailto: extension, otherwise OSX will open Mail, again. -->
 <span class="string indentNominal">Portland, OR</span>
 INFO  <!-- # end Heredoc -->
 
@@ -150,7 +150,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">"Athletepath"</span>,
     <span class="string">1.75</span>,
     <span class="string">"Results and data management, product development."</span>,
-    <span class="string">'Building out our near-RESTful data api for bulk result imports and live streaming.'</span>,
+    <span class="string">'Building out our near-RESTful data api for bulk result imports and live streaming of race results.'</span>,
     <span class="string">'<a class="string" target="andrewsresume" href="https://www.athletepath.com">https://www.athletepath.com</a>'</span>,
     <span class="boolean">true</span>)
 
@@ -158,7 +158,7 @@ INFO  <!-- # end Heredoc -->
     <span class="string">"Geekbench"</span>,
     <span class="string">0.4</span>,
     <span class="string">"Industry-leading benchmark software."</span>,
-    <span class="string">'Taking their website from Rails 2 to 3, and moving the received data format from XML to JSON.'</span>,
+    <span class="string">'Updating their website from Rails 2 to 3, and migrating the data format from XML to JSON.'</span>,
     <span class="string">'<a class="string" target="andrewsresume" href="http://www.primatelabs.com/geekbench/">http://www.primatelabs.com/geekbench</a>'</span>,
     <span class="boolean">true</span>)
 
